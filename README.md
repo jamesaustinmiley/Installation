@@ -19,10 +19,10 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region that you selected during the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, you should select an option that has 2 vcpus so that there will be plenty of processing power, memory, and storage capacity to utilize (Standard_D2s_v3 - 2 vcpus, 8 GB Memory).
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://imgur.com/OE6jg9X.png" alt="Virtual Machine Creation"/>
 </p>
 <br />
 
