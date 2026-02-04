@@ -44,13 +44,10 @@ Use the Virtual Machine's public IP address, Username, and Password to log into 
 <br />
 
 <p>
-The next step is to install PHP, which is a backend scripting language that osTicket runs on. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C Drive titled PHP. Unzip and extract the contents, such as the binaries and language files, from the PHP 7.3.8 file and move them to your PHP folder in the C Drive for osTicket installation. Install VC_redist, which implements runtime components required by PHP within IIS. 
+The next step is to install PHP, which is a backend scripting language that osTicket runs on. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C Drive titled PHP. Unzip and extract the contents, such as the binaries and language files, from the PHP file and move them to your PHP folder in the C Drive for osTicket installation. Install VC_redist, which implements runtime components required by PHP within IIS. 
 </p>
 <p>
 <img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
-</p>
-<p>
-<img src="https://imgur.com/9JTOTs3.png" alt="PHP Folder"/>
 </p>
 <p>
 <img src="https://imgur.com/9eHghjE.png" alt="PHP Folder Contents"/>
@@ -78,4 +75,37 @@ Another important step is to install MySQl, a database management system which w
 <br />
 
 <p>
-
+Open Internet Information Services as an Administrator. Register PHP from within IIS using the PHP Manager, which will allow PHP to run within the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot in the Windows C Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. to enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes. 
+</p>
+<p>
+<img src="https://imgur.com/mCPHnUq.png" alt="IIS Administrator"/>
+</p>
+<p>
+<img src="https://imgur.com/K2lJ0Uv.png" alt="IIS Manager"/>
+</p>
+<p>
+<img src="https://imgur.com/YucpG3z.png" alt="Register new PHP version"/>
+</p>
+<p>
+<img src="https://imgur.com/1d4tXHH.png" alt="php-cgi"/>
+</p>
+<p>
+<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
+</p>
+<p>
+<img src="https://imgur.com/21WUj2a.png" alt="wwwroot osTicket"/>
+</p>
+<p>
+<img src="https://imgur.com/LTPmqq4.png" alt="Browse 80"/>
+</p>
+<p>
+<img src="https://imgur.com/uzcXpxj.png" alt="Missing Extensions"/>
+</p>
+<p>
+<img src="https://imgur.com/hTfN2nf.png" alt="PHP Manager"/>
+</p>
+<p>
+<img src="https://imgur.com/G2WyaqA.png" alt="PHP Extensions"/>
+</p>
+<p>
+<img src="
