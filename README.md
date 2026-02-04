@@ -75,7 +75,7 @@ Another important step is to install MySQl, a database management system which w
 <br />
 
 <p>
-Open Internet Information Services as an Administrator. Register PHP from within IIS using the PHP Manager, which will allow PHP to run within the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot in the Windows C Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. to enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes. Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php.
+Open Internet Information Services as an Administrator. Register PHP from within IIS using the PHP Manager, which will allow PHP to run within the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot in the Windows C Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. to enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes.  
 </p>
 <p>
 <img src="https://imgur.com/mCPHnUq.png" alt="IIS Administrator"/>
@@ -110,8 +110,19 @@ Open Internet Information Services as an Administrator. Register PHP from within
 <p>
 <img src="https://imgur.com/lBd5ERo.png" alt="Enabled Extensions"/>
 </p>
+<br />
+
+<p>
+Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket by right-clicking the ost-config.php file and selecting Properties. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply.  
+</p>
 <p>
 <img src="https://imgur.com/EDhaY6f.png" alt="Rename File"/>
+</p>
+<p>
+<img src="https://imgur.com/x2iasTQ.png" alt="Disabling Permissions"/>
+</p>
+<p>
+<img src="https://imgur.com/ypULlcz.png" alt="Enabling Permissions"/>
 </p>
 <p>
 <img src="
