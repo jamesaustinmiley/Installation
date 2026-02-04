@@ -113,10 +113,13 @@ Open Internet Information Services as an Administrator. Register PHP from within
 <br />
 
 <p>
-Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket by right-clicking the ost-config.php file and selecting Properties. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply.  
+Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply.  
 </p>
 <p>
-<img src="https://imgur.com/EDhaY6f.png" alt="Rename File"/>
+<img src="https://imgur.com/sRs3Hoo.png" alt="Rename File"/>
+</p>
+<p>
+<img src="https://imgur.com/v7wGkV8.png" alt="Advanced Security"/>
 </p>
 <p>
 <img src="https://imgur.com/x2iasTQ.png" alt="Disabling Permissions"/>
