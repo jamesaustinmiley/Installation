@@ -113,7 +113,7 @@ Open Internet Information Services as an Administrator. Register PHP from within
 <br />
 
 <p>
-Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply.  
+Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply. Return to the osTicket website and click Continue to set up your Helpdesk, and Admin User Settings. To set up your Database Settings, you must install HeidiSQL. Create a new session, make sure the Username and Password match (root/root), and open the session. Create a new database named osTicket. Go back to Database Settings and fill in MySQL Database, Username, and Password. Click Install Now to view the osTicket Installer page.  
 </p>
 <p>
 <img src="https://imgur.com/sRs3Hoo.png" alt="Rename File"/>
@@ -128,4 +128,20 @@ Rename the ost-sampleconfig.php file, located in the osTicket folder in the Wind
 <img src="https://imgur.com/ypULlcz.png" alt="Enabling Permissions"/>
 </p>
 <p>
-<img src="
+<img src="https://imgur.com/uzcXpxj.png" alt="osTicket Site"/>
+</p>
+<p>
+<img src="https://imgur.com/8N6w62M.png" alt="Helpdesk and Admin User"/>
+</p>
+<p>
+<img src="https://imgur.com/ImGrHPw.png" alt="HeidiSQL"/>
+</p>
+<p>
+<img src="https://imgur.com/0WuhWPz.png" alt="HeidiSQL New Session"/>
+</p>
+<p>
+<img src="https://imgur.com/SwHmxOT.png" alt="HeidiSQL New Database"/>
+</p>
+<p>
+<img src="https://imgur.com/7eRJhM7.png" alt="osTicket Installer"/>
+</p>
