@@ -8,7 +8,7 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
+- Microsoft Azure 
 - Remote Desktop
 - Internet Information Services (IIS)
 
@@ -19,25 +19,63 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2>Installation Steps</h2>
 
 <p>
-On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region that you selected during the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, you should select an option that has 2 vcpus so that there will be plenty of processing power, memory, and storage capacity to utilize (Standard_D2s_v3 - 2 vcpus, 8 GB Memory).
+On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region from the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, you should select an option that has 2 vcpus so that there will be plenty of processing power, memory, and storage capacity to utilize (Standard_D2s_v3 - 2 vcpus, 8 GB Memory). Set up a Username and Password that will be associated with the VM and confirm that you have an eligible Windows license. 
 </p>
 <p>
-<img src="https://imgur.com/OE6jg9X.png" alt="Virtual Machine Creation"/>
+<img src="https://imgur.com/WitlT1o.png" alt="Resource Group Creation"/>
+</p>
+<p>
+<img src="https://imgur.com/FOYHMDy.png" alt="Virtual Machine Creation 1"/>
+</p>
+<p>
+<img src="https://imgur.com/OE6jg9X.png" alt="Virtual Machine Creation 2"/>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Use the Virtual Machine's public IP address, Username, and Password to log into it with Remote Desktop. Before installing OsTicket onto the VM, you must enable Internet Information Services on the VM. The IIS is the primary web server used by Windows and will allow the osTicket app to run by serving its files and executing its scripts. Without IIS, osTicket can't be accessed from a browser due to lack of HTTPS service. 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://imgur.com/rMG5n5U.png" alt="Remote Desktop"/>
+</p>
+<p>
+<img src="https://imgur.com/t27Gwhs.png" alt="IIS Enabling"/>
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+The next step is to install PHP, which is a backend scripting language that osTicket runs on. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C Drive titled PHP. Unzip and extract the contents, such as the binaries and language files, from the PHP 7.3.8 file and move them to your PHP folder in the C Drive for osTicket installation. Install VC_redist, which implements runtime components required by PHP within IIS. 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
+</p>
+<p>
+<img src="https://imgur.com/9JTOTs3.png" alt="PHP Folder"/>
+</p>
+<p>
+<img src="https://imgur.com/9eHghjE.png" alt="PHP Folder Contents"/>
 </p>
 <br />
+
+<p>
+Another important step is to install MySQl, a database management system which will store and manage all of the osTicket help desk system's data. During installation of MySQL, choose Typical Setup, which will install the most common program features. Launch the MySQL Instance Configuration Wizard. Choose Standard Configuration and to Install as a Windows Service. When setting the security options, type ROOT as the password. 
+</p>
+<p>
+<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
+</p>
+<p>
+<img src="https://imgur.com/zJO0qZk.png" alt="Typical Setup"/>
+</p>
+<p>
+<img src="https://imgur.com/ylioDKN.png" alt="Configuration wizard"/>
+</p>
+<p>
+<img src="https://imgur.com/0uhz7Wg.png" alt="Standard Configuration"/>
+</p>
+<p>
+<img src="https://imgur.com/ayQA0WK.png" alt="Password"/>
+</p>
+<br />
+
+<p>
+
