@@ -3,7 +3,7 @@
 </p>
 
 <h1>osTicket - Installation</h1>
-This tutorial outlines the installation of the open-source help desk ticketing system osTicket. OsTicket is used to manage both internal and external requests via e-mail, phone, or the company website. These requests are then converted into tickets that can be tracked and worked to completion. <br />
+This tutorial outlines the installation of the open-source help desk ticketing system osTicket. OsTicket is used to manage both internal and external requests via e-mail, phone, or the company website. These requests are then converted into tickets that can be tracked and completed. <br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -19,7 +19,7 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2>Installation Steps</h2>
 
 <p>
-On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region from the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, you should select an option that has 2 vcpus so that there will be plenty of processing power, memory, and storage capacity to utilize (Standard_D2s_v3 - 2 vcpus, 8 GB Memory). Set up a Username and Password that will be associated with the VM and confirm that you have an eligible Windows license. 
+On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region from the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, select an option with 2 vCPUs to ensure sufficient processing power, memory, and storage capacity (Standard_D2s_v3 - 2 vCPUs, 8 GB Memory). Set up a Username and Password that will be associated with the VM and confirm that you have an eligible Windows license. 
 </p>
 <p>
 <img src="https://imgur.com/WitlT1o.png" alt="Resource Group Creation"/>
@@ -33,7 +33,7 @@ On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtu
 <br />
 
 <p>
-Use the Virtual Machine's public IP address, Username, and Password to log into it with Remote Desktop. Before installing OsTicket onto the VM, you must enable Internet Information Services on the VM. The IIS is the primary web server used by Windows and will allow the osTicket app to run by serving its files and executing its scripts. Without IIS, osTicket can't be accessed from a browser due to lack of HTTPS service. 
+Use the Virtual Machine's public IP address, Username, and Password to log into it with Remote Desktop. Before installing OsTicket on the VM, you must enable Internet Information Services on the VM. IIS is the primary web server for Windows and enables the osTicket app to run by serving its files and executing its scripts. Without IIS, osTicket can't be accessed via a browser because there's no HTTPS service. 
 </p>
 <p>
 <img src="https://imgur.com/rMG5n5U.png" alt="Remote Desktop"/>
@@ -44,7 +44,7 @@ Use the Virtual Machine's public IP address, Username, and Password to log into 
 <br />
 
 <p>
-The next step is to install PHP, which is a backend scripting language that osTicket runs on. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C Drive titled PHP. Unzip and extract the contents, such as the binaries and language files, from the PHP file and move them to your PHP folder in the C Drive for osTicket installation. Install VC_redist, which implements runtime components required by PHP within IIS. 
+The next step is to install PHP, the backend scripting language on which osTicket runs. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C: drive named PHP. Unzip the PHP file and extract the contents (e.g., binaries and language files), then move them to your PHP folder on the C: Drive for osTicket installation. Install VC_redist, which implements the runtime components required by PHP within IIS. 
 </p>
 <p>
 <img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
@@ -55,7 +55,7 @@ The next step is to install PHP, which is a backend scripting language that osTi
 <br />
 
 <p>
-Another important step is to install MySQl, a database management system which will store and manage all of the osTicket help desk system's data. During installation of MySQL, choose Typical Setup, which will install the most common program features. Launch the MySQL Instance Configuration Wizard. Choose Standard Configuration and to Install as a Windows Service. When setting the security options, type ROOT as the password. 
+Another important step is to install MySQL, a database management system that will store and manage all osTicket help desk data. During MySQL installation, select Typical Setup to install the most common program features. Launch the MySQL Instance Configuration Wizard. Choose Standard Configuration and install it as a Windows Service. When setting the security options, type ROOT as the password. 
 </p>
 <p>
 <img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
@@ -75,7 +75,7 @@ Another important step is to install MySQl, a database management system which w
 <br />
 
 <p>
-Open Internet Information Services as an Administrator. Register PHP from within IIS using the PHP Manager, which will allow PHP to run within the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot in the Windows C Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. to enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes.  
+Open Internet Information Services as an Administrator. Register PHP in IIS using the PHP Manager to enable it to run on the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot on the C: Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. To enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes.    
 </p>
 <p>
 <img src="https://imgur.com/mCPHnUq.png" alt="IIS Administrator"/>
@@ -113,7 +113,7 @@ Open Internet Information Services as an Administrator. Register PHP from within
 <br />
 
 <p>
-Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all of the listed permissions and add new permissions. Give everyone permission to osTicket by listing Everyone as the Principal with Full Control as the Basic Permission and click Apply. Return to the osTicket website and click Continue to set up your Helpdesk, and Admin User Settings. To set up your Database Settings, you must install HeidiSQL. Create a new session, make sure the Username and Password match (root/root), and open the session. Create a new database named osTicket. Go back to Database Settings and fill in MySQL Database, Username, and Password. Click Install Now to view the osTicket Installer page.  
+Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all the listed permissions and add new permissions. Grant everyone permission to osTicket by setting Everyone as the Principal with Full Control as the Basic Permission, then click Apply. Return to the osTicket website and click Continue to set up your Helpdesk and Admin User Settings. To set up your Database Settings, you must install HeidiSQL. Create a new session, make sure the Username and Password match (root/root), and open the session. Create a new database named osTicket. Go back to Database Settings and fill in MySQL Database, Username, and Password. Click Install Now to view the osTicket Installer page.
 </p>
 <p>
 <img src="https://imgur.com/sRs3Hoo.png" alt="Rename File"/>
