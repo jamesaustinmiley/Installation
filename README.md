@@ -290,5 +290,20 @@ Click Extract which will result in the files being extracted to a new folder, al
 <img src="https://imgur.com/lXrsQG6.png" alt="New Folder"/>
 </p>
 <p>
+Open the new osTicket-v1.15.8 folder to find the Upload folder. Open File Explorer in another window where you will click on Windows C Drive, click on inetpub, and finally wwwroot. 
+</p>
+<p>
+<img src="https://imgur.com/V44x5hY.png" alt="wwwroot"/>
+</p>
+<p>
+Drag the Upload folder from the osTicket-v1.15.18 to wwwroot and rename it osTicket. 
+</p>
+<p>
+<img src="https://imgur.com/8PM1IOa.png" alt="osTicket"/>
+</p>
+<br />
+
+<p>
+
 
 
