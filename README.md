@@ -267,10 +267,28 @@ Double-click php-cgi which will result in PHP being registerd within IIS.
 <img src="https://imgur.com/DNYqC2r.png" alt="Register PHP within IIS"/>
 </p>
 <p>
-Reload IIS by stopping and starting the server.
+Reload IIS by stopping and starting the server to implement the changes.
 </p>
 <p>
 <img src="https://imgur.com/Qaz5zyG.png" alt="Stopping and Starting"/>
 </p>
+<br />
+
 <p>
+Right-click the osTicket-v1.15.8 zip folder within the osTicket Installation Files folder and click Extract All. 
+</p>
+<p>
+<img src="https://imgur.com/OhmUSLe.png" alt="osTicket v1.15.8 zip folder"/>
+</p>
+<p>
+Click Extract which will result in the files being extracted to a new folder, also named osTicket-v1.15.8, located within the osTicket Installation Files folder. 
+</p>
+<p>
+<img src="https://imgur.com/oqGBXJQ.png" alt="Extract"/>
+</p>
+<p>
+<img src="https://imgur.com/lXrsQG6.png" alt="New Folder"/>
+</p>
+<p>
+
 
