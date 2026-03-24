@@ -19,129 +19,222 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2>Installation Steps</h2>
 
 <p>
-On Microsoft Azure, create a Resource Group named osTicket. Next, create a Virtual Machine named osticket-vm that will be a part of the osTicket Resource Group. Select the same Region from the creation of the Resource Group. Under Image, you will select the operating system that will be utilized by the Virtual Machine (Windows 11 Pro, version 25H2). Under Size, select an option with 2 vCPUs to ensure sufficient processing power, memory, and storage capacity (Standard_D2s_v3 - 2 vCPUs, 8 GB Memory). Set up a Username and Password that will be associated with the VM and confirm that you have an eligible Windows license. 
+Create a Microsoft Azure Resource Group.
 </p>
 <p>
-<img src="https://imgur.com/WitlT1o.png" alt="Resource Group Creation"/>
+<img src="https://imgur.com/xmznU8l.png" alt="Resource Group Creation"/>
 </p>
 <p>
-<img src="https://imgur.com/FOYHMDy.png" alt="Virtual Machine Creation 1"/>
+Create a Microsoft Azure Virtual Machine.
 </p>
 <p>
-<img src="https://imgur.com/OE6jg9X.png" alt="Virtual Machine Creation 2"/>
+<img src="https://imgur.com/zdRJFdN.png" alt="Virtual Machine part 1"/>
+</p>
+<p>
+Ensure that the VM Region is the same as the Resource Group Region. 
+</p>
+<p>
+<img src="https://imgur.com/dBtlAHj.png" alt="Virtual Machine part 2"/>
+</p>
+<p>
+Pick a Windows Image (Windows 11 Pro, version 25H2). When choosing the Size of the VM, make sure that it has 2 vcpus and 8 gb (Standard _D2s_v3-2 vcpus, 8 GB Memory).
+</p>
+<p>
+<img src="https://imgur.com/NMIVfY7.png" alt="Virtual Machine part 3"/>
+</p>
+<p>
+Enter a Username and Password that will be used for Remote Desktop access. 
+</p>
+<p>
+<img src="https://imgur.com/VzXo0eC.png" alt="Virtual Machine part 4"/>
+</p>
+<p>
+Check the box that confirms that you have an eligible Windows license.
+</p>
+<p>
+<img src="https://imgur.com/XNCaU9N.png" alt="Virtual Machine part 5"/>
 </p>
 <br />
 
 <p>
-Use the Virtual Machine's public IP address, Username, and Password to log into it with Remote Desktop. Before installing OsTicket on the VM, you must enable Internet Information Services on the VM. IIS is the primary web server for Windows and enables the osTicket app to run by serving its files and executing its scripts. Without IIS, osTicket can't be accessed via a browser because there's no HTTPS service. 
+Find the Public IP Address for the Virtual Machine. 
 </p>
 <p>
-<img src="https://imgur.com/rMG5n5U.png" alt="Remote Desktop"/>
+<img src="https://imgur.com/hmDqnOP.png" alt="Public IP Address"/>
 </p>
 <p>
-<img src="https://imgur.com/t27Gwhs.png" alt="IIS Enabling"/>
+Open the Remote Desktop Connection program and use VM's Public IP Address to start the connection. 
+</p>
+<p>
+<img src="https://imgur.com/vP6CB44.png" alt="Remote Desktop Connection part 1"/>
+</p>
+<p>
+Enter the VM Username and Password to complete the Remote Desktop connection. 
+</p>
+<p>
+<img src="https://imgur.com/Lv9lOHs.png" alt="Remote Desktop Connection part 2"/>
 </p>
 <br />
 
 <p>
-The next step is to install PHP, the backend scripting language on which osTicket runs. Install the PHP Manager for IIS. Install the IIS URL Rewrite Module. Create a new directory on the Windows C: drive named PHP. Unzip the PHP file and extract the contents (e.g., binaries and language files), then move them to your PHP folder on the C: Drive for osTicket installation. Install VC_redist, which implements the runtime components required by PHP within IIS. 
+Download the osTicket Installation Files zip folder. 
 </p>
 <p>
-<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
+<img src="https://imgur.com/R3g0vCT.png" alt="osTicket Installation Files zip folder"/>
 </p>
 <p>
-<img src="https://imgur.com/9eHghjE.png" alt="PHP Folder Contents"/>
+Open Downloads Folder 
+</p>
+<p>
+<img src="https://imgur.com/m34P0fj.png" alt="Downloads Folder"/>
+</p>
+<p>
+Drag the osTicket Installation Files zip folder to the Home Page.
+</p>
+<p>
+<img src="https://imgur.com/lJqHTon.png" alt="Home Page"/>
+</p>
+<p>
+Right click the osTicket Installation Files zip folder and click Extract All. This will copy all of the items from the zip folder to a regular folder on the Home Page named osTicket Installation Files. 
+</p>
+<p>
+<img src="https://imgur.com/aByZnd2.png" alt="Extracting osTicket Installation Files"/>
+</p>
+<p>
+Open the osTicket Installation Files folder to view its contents. 
+</p>
+<p>
+<img src="https://imgur.com/z6JuZUW.png" alt="osTicket Installation Files folder content"/>
 </p>
 <br />
 
 <p>
-Another important step is to install MySQL, a database management system that will store and manage all osTicket help desk data. During MySQL installation, select Typical Setup to install the most common program features. Launch the MySQL Instance Configuration Wizard. Choose Standard Configuration and install it as a Windows Service. When setting the security options, type ROOT as the password. 
+Open the Control Panel.
 </p>
 <p>
-<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
+<img src="https://imgur.com/odzF9hP.png" alt="Control Panel"/>
 </p>
 <p>
-<img src="https://imgur.com/zJO0qZk.png" alt="Typical Setup"/>
+Uninstall a Program. 
 </p>
 <p>
-<img src="https://imgur.com/ylioDKN.png" alt="Configuration wizard"/>
+<img src="https://imgur.com/fFqGhVm.png" alt="Programs"/>
 </p>
 <p>
-<img src="https://imgur.com/0uhz7Wg.png" alt="Standard Configuration"/>
+Turn Windows features on or off. 
 </p>
 <p>
-<img src="https://imgur.com/ayQA0WK.png" alt="Password"/>
+<img src="https://imgur.com/9ojp16Z.png" alt="Windows Features"/>
+</p>
+<p>
+Check the Internet Information Services box and the CGI box to turn them on. IIS is the primary web server for Windows and enables the osTicket app to run by serving its files and executing its scripts. To find CGI, expand World Wide Web Services and then Application Development Features. CGI is a dependency that osTicket needs to operate. 
+</p>
+<p>
+<img src="https://imgur.com/HeYlMUV.png" alt="Turn Windows Features On"/>
 </p>
 <br />
 
 <p>
-Open Internet Information Services as an Administrator. Register PHP in IIS using the PHP Manager to enable it to run on the server. To enable PHP, you must click Register new PHP version, which will allow you to provide a path to php-cgi, a PHP executable file located in the PHP folder you created in the Windows C Drive. Reload IIS by stopping and starting the server to implement the changes. To install osTicket, unzip and extract the files from the osTicket folder. Move the upload folder from within osTicket to wwwroot on the C: Drive. Rename the Upload folder to osTicket. Once again, reload IIS by stopping and starting the server. Go to the osTicket website by clicking Browse *:80 on the osTicket Home Page within IIS. You will notice that there are some extensions that haven't been enabled. To enable these extensions, go back to the osTicket Home Page within IIS, click PHP Manager, and click Enable or disable an extension. Once you've enabled the necessary extensions, you can refresh the osTicket site and observe the changes.    
+Install PHP Manager for IIS from the osTicket Installation Files folder. PHP is the backend scripting language that osTicket runs on.    
 </p>
 <p>
-<img src="https://imgur.com/mCPHnUq.png" alt="IIS Administrator"/>
+<img src="https://imgur.com/3nFthaO.png" alt="PHP Manager"/>
 </p>
 <p>
-<img src="https://imgur.com/K2lJ0Uv.png" alt="IIS Manager"/>
+Install the IIS URL Rewrite Module from the osTicket Installation Files folder. 
 </p>
 <p>
-<img src="https://imgur.com/YucpG3z.png" alt="Register new PHP version"/>
-</p>
-<p>
-<img src="https://imgur.com/1d4tXHH.png" alt="php-cgi"/>
-</p>
-<p>
-<img src="https://imgur.com/ImGrHPw.png" alt="osTicket Installation Files"/>
-</p>
-<p>
-<img src="https://imgur.com/21WUj2a.png" alt="wwwroot osTicket"/>
-</p>
-<p>
-<img src="https://imgur.com/LTPmqq4.png" alt="Browse 80"/>
-</p>
-<p>
-<img src="https://imgur.com/uzcXpxj.png" alt="Missing Extensions"/>
-</p>
-<p>
-<img src="https://imgur.com/hTfN2nf.png" alt="PHP Manager"/>
-</p>
-<p>
-<img src="https://imgur.com/G2WyaqA.png" alt="PHP Extensions"/>
-</p>
-<p>
-<img src="https://imgur.com/lBd5ERo.png" alt="Enabled Extensions"/>
+<img src="https://imgur.com/lZFiGgX.png" alt="Rewrite Module"/>
 </p>
 <br />
 
 <p>
-Rename the ost-sampleconfig.php file, located in the osTicket folder in the Windows C Drive, to ost-config.php. Assign permissions to osTicket through the ost-config.php file. Disable all the listed permissions and add new permissions. Grant everyone permission to osTicket by setting Everyone as the Principal with Full Control as the Basic Permission, then click Apply. Return to the osTicket website and click Continue to set up your Helpdesk and Admin User Settings. To set up your Database Settings, you must install HeidiSQL. Create a new session, make sure the Username and Password match (root/root), and open the session. Create a new database named osTicket. Go back to Database Settings and fill in MySQL Database, Username, and Password. Click Install Now to view the osTicket Installer page.
+Open File Explorer
 </p>
 <p>
-<img src="https://imgur.com/sRs3Hoo.png" alt="Rename File"/>
+<img src="https://imgur.com/dWzRbNA.png" alt="File Explorer"/>
 </p>
 <p>
-<img src="https://imgur.com/v7wGkV8.png" alt="Advanced Security"/>
+Expand This PC to gain access to the Windows C Drive and its contents.
 </p>
 <p>
-<img src="https://imgur.com/x2iasTQ.png" alt="Disabling Permissions"/>
+<img src="https://imgur.com/bGO0GyU.png" alt="Windows C Drive"/>
 </p>
 <p>
-<img src="https://imgur.com/ypULlcz.png" alt="Enabling Permissions"/>
+Create a new folder in Windows C Drive named PHP. Right click in the C Drive, click New, and click Folder. 
 </p>
 <p>
-<img src="https://imgur.com/uzcXpxj.png" alt="osTicket Site"/>
+<img src="https://imgur.com/6ojs6za.png" alt="PHP folder"/>
 </p>
 <p>
-<img src="https://imgur.com/8N6w62M.png" alt="Helpdesk and Admin User"/>
+Unzip the php 7.3.8 zip folder in the osTicket Installation Files folder. Right click the php 7.3.8 folder and select Extract All. 
 </p>
 <p>
-<img src="https://imgur.com/ImGrHPw.png" alt="HeidiSQL"/>
+<img src="https://imgur.com/do4tz9t.png" alt="php 7.3.8 zip folder"/>
 </p>
 <p>
-<img src="https://imgur.com/0WuhWPz.png" alt="HeidiSQL New Session"/>
+Click Browse to find a destination where the files will be extracted to. 
 </p>
 <p>
-<img src="https://imgur.com/SwHmxOT.png" alt="HeidiSQL New Database"/>
+<img src="https://imgur.com/vGZZPUR.png" alt="Browse"/>
 </p>
 <p>
-<img src="https://imgur.com/7eRJhM7.png" alt="osTicket Installer"/>
+Select the PHP folder in Windows C Drive. 
 </p>
+<p>
+<img src="https://imgur.com/3hGnjlK.png" alt="Select Folder"/>
+</p>
+<p>
+Extract the php 7.3.8 zip folder files to the PHP folder in Windows C Drive. 
+</p>
+<p>
+<img src="https://imgur.com/3SApW02.png" alt="Extraction"/>
+</p>
+<br />
+
+<p>
+Install the Microsoft Visuall C++ Redistributale (x86) file from the osTicket Installation Files folder. 
+</p>
+<p>
+<img src="https://imgur.com/34PL8lo.png" alt="VC"/>
+</p>
+<p>
+Start the installation of MYSQL 5.5.62 from the osTicket Installation Files folder. MYSQL is the database management system that will store and manage all osTicket help desk data.
+</p>
+<p>
+<img src="https://imgur.com/uf62zVJ.png" alt="MYSQL 5.5.62"/>
+</p>
+<p>
+Choose Typical Setup.
+</p>
+<p>
+<img src="https://imgur.com/i4qmx9o.png" alt="Typical"/>
+</p>
+<p>
+Launch the MySQL Instance Configuration Wizard. 
+</p>
+<p>
+<img src="https://imgur.com/YGxOuHH.png" alt="Instance Configuration Wizard"/>
+</p>
+<p>
+Choose Standard Configuration. 
+</p>
+<p>
+<img src="https://imgur.com/2I7WBkO.png" alt="Standard Configuration"/>
+</p>
+<p>
+Install as Windows Service. 
+</p>
+<p>
+<img src="https://imgur.com/IclqORy.png" alt="Windows Service"/>
+</p>
+<p>
+Enter a password for MYSQL. 
+</p>
+<p>
+<img src="https://imgur.com/gFCXc63.png" alt="MYSQL Password"/>
+</p>
+<br />
+
+<p>
+
