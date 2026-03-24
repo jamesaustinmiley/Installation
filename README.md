@@ -304,6 +304,31 @@ Drag the Upload folder from the osTicket-v1.15.18 to wwwroot and rename it osTic
 <br />
 
 <p>
+Open IIS and stop and start the server. Expand osticket-vm, Sites, and Default Web Site to get to osTicket Home. 
+</p>
+<p>
+<img src="https://imgur.com/ITLPrS4.png" alt="osTicket Home"/>
+</p>
+<p>
+In IIS, click on Browse *:80 (http) on the far right of the page to load the osTicket Installer page. Scroll down to view a list of extensions including some that haven't been enabled. 
+</p>
+<p>
+<img src="https://imgur.com/iIA5mbJ.png" alt="osTicket Installer"/>
+</p>
+<p>
+<img src="https://imgur.com/c4mfhxY.png" alt="Extensions"/>
+</p>
+<p>
+Go back to IIS (osTicket Home), open PHP Manager, and click on Enable or disable an extension.
+</p>
+<p>
+<img src="https://imgur.com/2eTpY7S.png" alt="osTicket Home PHP Manager"/>
+</p>
+<p>
+<img src="https://imgur.com/x5tj4AV.png" alt="Enable Extensions"/>
+</p>
+<p>
+
 
 
 
