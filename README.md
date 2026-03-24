@@ -237,4 +237,16 @@ Enter a password for MYSQL.
 <br />
 
 <p>
+Open Internet Information Services Manager as an Administrator. 
+</p>
+<p>
+<img src="https://imgur.com/wj9mxmQ.png" alt="Administrator"/>
+</p>
+<p>
+Open PHP Manager within IIS. 
+</p>
+<p>
+<img src="https://imgur.com/y1IhZ0U.png" alt="PHP Manager"/>
+</p>
+<p>
 
