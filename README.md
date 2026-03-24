@@ -310,7 +310,7 @@ Open IIS and stop and start the server. Expand osticket-vm, Sites, and Default W
 <img src="https://imgur.com/ITLPrS4.png" alt="osTicket Home"/>
 </p>
 <p>
-In IIS, click on Browse *:80 (http) on the far right of the page to load the osTicket Installer page. Scroll down to view a list of extensions including some that haven't been enabled. 
+In IIS, click on Browse *:80 (http) on the far right of the page to load the osTicket Installer page. Scroll down to view a list of extensions, including some that haven't been enabled. 
 </p>
 <p>
 <img src="https://imgur.com/iIA5mbJ.png" alt="osTicket Installer"/>
@@ -328,6 +328,27 @@ Go back to IIS (osTicket Home), open PHP Manager, and click on Enable or disable
 <img src="https://imgur.com/x5tj4AV.png" alt="Enable Extensions"/>
 </p>
 <p>
+Enable three extensions (php_imap.dll, php_intl.dll, and php_opcache.dll) and reload the osTicket Installer page to view the extensions again. 
+</p>
+<p>
+<img src="https://imgur.com/3NCGKO0.png" alt="php_imap.dll"/>
+</p>
+<p>
+<img src="https://imgur.com/DT6cVAt.png" alt="php_intl.dll"/>
+</p>
+<p>
+<img src="https://imgur.com/9NECEWa.png" alt="php_opcache.dll"/>
+</p>
+<p>
+<img src="https://imgur.com/BEWpuM2.png" alt="PHP Extensions"/>
+</p>
+<p>
+<img src="https://imgur.com/UYWXXA4.png" alt="Extensions part 2"/>
+</p>
+<br />
+
+<p>
+
 
 
 
