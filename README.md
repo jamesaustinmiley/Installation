@@ -378,6 +378,102 @@ Click Disable Inheritance to remove all of the inherited permissions.
 <img src="https://imgur.com/lonOrQp.png" alt="Remove all inherited permissions"/>
 </p>
 <p>
+Add new permissions. 
+</p>
+<p>
+<img src="https://imgur.com/ZMXvhpZ.png" alt="Add New Permissions"/>
+</p>
+<p>
+Select a Principal that the new permissions will apply to. 
+</p>
+<p>
+<img src="https://imgur.com/aJvqrO2.png" alt="Select a Principal"/>
+</p>
+<p>
+These new permissions will be applied to Everyone. Click Check Names.
+</p>
+<p>
+<img src="https://imgur.com/pNjMVd9.png" alt="Everyone"/>
+</p>
+<p>
+Check Full Control to give Everyone access to the basic permissions. 
+</p>
+<p>
+<img src="https://imgur.com/2BtAoVA.png" alt="Full Control"/>
+</p>
+Observe that Everyone now has permissions with regards to ost-config.php.
+</p>
+<p>
+<img src="https://imgur.com/3rdXiAf.png" alt="Properties"/>
+</p>
+<br />
+
+<p>
+Go back to the osTicket Installer page to begin the osTicket Basic Installation. Provide a Helpdesk name and a Default Email under System Settings.
+</p>
+<p>
+<img src="https://imgur.com/5i5EPtv.png" alt="System Settings"/>
+</p>
+<p>
+Provide a name, email, username, and password under Admin User.
+</p>
+<p>
+<img src="https://imgur.com/eueOQWL.png" alt="Admin User"/>
+</p>
+<br />
+
+<p>
+Install HeidiSQL 12.3.0.6589 from the osTicket Installation Files folder. HeidiSQL is the database for osTicket. 
+</p>
+<p>
+<imgs src="https://imgur.com/NJgFkqp.png" alt="HeidiSQL"/>
+</p>
+<p>
+Select a location where HeidiSQL will be installed. The location will be a folder named HeidiSQL.
+</p>
+<p>
+<img src="https://imgur.com/gS3LFMN.png" alt="Select Destination Location"/>
+</p>
+<p>
+The HeidiSQL folder will be located on the Home Page. 
+</p>
+<p>
+<img src="https://imgur.com/5R1x9m1.png" alt="Start Menu Folder"/>
+</p>
+<p>
+Select all of the listed tasks to ensure they are performed. 
+</p>
+<p>
+<img src="https://imgur.com/1nWhcPx.png" alt="Additional Tasks"/>
+</p>
+<p>
+Open HeidiSQL on the Home Page. Click New in the bottom left to create a new session. Enter your MySQL password from earlier. 
+</p>
+<p>
+<img src="https://imgur.com/1SQKVDP.png" alt="New Session"/>
+</p>
+<p>
+Create a new database named osTicket. Right-click Unnamed to start the process.
+</p>
+<p>
+<img src="https://imgur.com/KNOuZHQ.png" alt="New Database"/>
+</p>
+<p>
+<img src="https://imgur.com/DKhVh5J.png" alt="New Database part 2"/>
+</p>
+<p>
+Return to the osTicket Basic Installation page to fill in the Database Settings section.
+</p>
+<p>
+<img src="https://imgur.com/O1xh33V.png" alt="Database Settings"/>
+</p>
+<p>
+View the osTicket Installer page after successful installation. 
+</p>
+<p>
+<img src="https://imgur.com/yMa16hM.png" alt="Success"/>
+</p>
+
 
 
 
