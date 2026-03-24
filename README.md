@@ -328,7 +328,7 @@ Go back to IIS (osTicket Home), open PHP Manager, and click on Enable or disable
 <img src="https://imgur.com/x5tj4AV.png" alt="Enable Extensions"/>
 </p>
 <p>
-Enable three extensions (php_imap.dll, php_intl.dll, and php_opcache.dll) and reload the osTicket Installer page to view the extensions again. 
+Enable three extensions (php_imap.dll, php_intl.dll, and php_opcache.dll) by right-clicking each one and clicking Enable.
 </p>
 <p>
 <img src="https://imgur.com/3NCGKO0.png" alt="php_imap.dll"/>
@@ -343,10 +343,40 @@ Enable three extensions (php_imap.dll, php_intl.dll, and php_opcache.dll) and re
 <img src="https://imgur.com/BEWpuM2.png" alt="PHP Extensions"/>
 </p>
 <p>
+Reload the osTicket Installer page to view the extensions again. Disregard the APCu and Zend OPcache extensions.
+</p>
+<p>
 <img src="https://imgur.com/UYWXXA4.png" alt="Extensions part 2"/>
 </p>
 <br />
 
+<p>
+Navigate to ost-sampleconfig.php, which is located in the Windows C Drive (inetpub/wwwroot/osTicket/include).
+</p>
+<p>
+<img src="https://imgur.com/UitJVze.png" alt="ost-sample.config"/>
+</p>
+<p>
+Rename ost-sampleconfig.php to ost-config.php.
+</p>
+<p>
+<img src="https://imgur.com/hRwMc05.png" alt="ost-config.php"/>
+</p>
+<p>
+Right-click ost-config.php, click Properties, click Security, and click Advanced under Permissions for SYSTEM. 
+</p>
+<p>
+<img src="https://imgur.com/zAxARkq.png" alt="Advanced"/>
+</p>
+<p>
+Click Disable Inheritance to remove all of the inherited permissions. 
+</p>
+<p>
+<img src="https://imgur.com/3pSh8HW.png" alt="Disable Inheritance"/>
+</p>
+<p>
+<img src="https://imgur.com/lonOrQp.png" alt="Remove all inherited permissions"/>
+</p>
 <p>
 
 
