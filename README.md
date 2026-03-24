@@ -243,10 +243,34 @@ Open Internet Information Services Manager as an Administrator.
 <img src="https://imgur.com/wj9mxmQ.png" alt="Administrator"/>
 </p>
 <p>
-Open PHP Manager within IIS. 
+Register PHP within IIS by opening PHP Manager. 
 </p>
 <p>
 <img src="https://imgur.com/y1IhZ0U.png" alt="PHP Manager"/>
+</p>
+<p>
+Click Register new PHP version and provide a path to the php executable file (php-cgi) by clicking Browse (...).
+</p>
+<p>
+<img src="https://imgur.com/qNMMJOr.png" alt="Register new PHP version"/>
+</p>
+<p>
+Open the PHP folder, within Windows C Drive, where you will find php-cgi.
+</p>
+<p>
+<img src="https://imgur.com/ZSrofcN.png" alt="php-cgi"/>
+</p>
+<p>
+Double-click php-cgi which will result in PHP being registerd within IIS. 
+</p>
+<p>
+<img src="https://imgur.com/DNYqC2r.png" alt="Register PHP within IIS"/>
+</p>
+<p>
+Reload IIS by stopping and starting the server.
+</p>
+<p>
+<img src="https://imgur.com/Qaz5zyG.png" alt="Stopping and Starting"/>
 </p>
 <p>
 
