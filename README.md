@@ -31,7 +31,7 @@ Create a Microsoft Azure Virtual Machine (osticket-vm).
 <img src="https://imgur.com/zdRJFdN.png" alt="Virtual Machine part 1"/>
 </p>
 <p>
-Ensure that the VM Region is the same as the Resource Group Region (South-Central U.S.). 
+Ensure that the VM Region is the same as the Resource Group Region (South-Central US). 
 </p>
 <p>
 <img src="https://imgur.com/dBtlAHj.png" alt="Virtual Machine part 2"/>
