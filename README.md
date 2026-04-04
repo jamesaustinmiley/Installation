@@ -19,7 +19,7 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2>Installation Steps</h2>
 
 <p>
-Create a Microsoft Azure Resource Group.
+Create a Microsoft Azure Resource Group (osTicket).
 </p>
 <p>
 <img src="https://imgur.com/xmznU8l.png" alt="Resource Group Creation"/>
