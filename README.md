@@ -25,13 +25,13 @@ Create a Microsoft Azure Resource Group (osTicket).
 <img src="https://imgur.com/xmznU8l.png" alt="Resource Group Creation"/>
 </p>
 <p>
-Create a Microsoft Azure Virtual Machine.
+Create a Microsoft Azure Virtual Machine (osticket-vm).
 </p>
 <p>
 <img src="https://imgur.com/zdRJFdN.png" alt="Virtual Machine part 1"/>
 </p>
 <p>
-Ensure that the VM Region is the same as the Resource Group Region. 
+Ensure that the VM Region is the same as the Resource Group Region (South-Central U.S.). 
 </p>
 <p>
 <img src="https://imgur.com/dBtlAHj.png" alt="Virtual Machine part 2"/>
