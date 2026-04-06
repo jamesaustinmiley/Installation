@@ -11,6 +11,7 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 - Microsoft Azure 
 - Remote Desktop
 - Internet Information Services (IIS)
+- HeidiSQL
 
 <h2>Operating Systems Used </h2>
 
