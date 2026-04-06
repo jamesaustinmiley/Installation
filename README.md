@@ -16,7 +16,7 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 
 - Windows 11 Pro</b> (25H2)
 
-<h2>Installation Steps</h2>
+<h2> Steps </h2>
 
 <p>
 Create a Microsoft Azure Resource Group (osTicket).
