@@ -20,13 +20,13 @@ This tutorial outlines the installation of the open-source help desk ticketing s
 <h2> Steps </h2>
 
 <p>
-Create a Microsoft Azure Resource Group (osTicket).
+Create a Microsoft Azure Resource Group (osTicket) and choose a Region that will also be used for the Virtual Machine (South Central US).
 </p>
 <p>
 <img src="https://imgur.com/xmznU8l.png" alt="Resource Group Creation"/>
 </p>
 <p>
-Create a Microsoft Azure Virtual Machine (osticket-vm).
+Create a Microsoft Azure Virtual Machine (osticket-vm). Choose osTicket as the Resource Group that will be connected to the VM. 
 </p>
 <p>
 <img src="https://imgur.com/zdRJFdN.png" alt="Virtual Machine part 1"/>
@@ -44,7 +44,7 @@ Pick a Windows Image (Windows 11 Pro, version 25H2). When choosing the Size of t
 <img src="https://imgur.com/NMIVfY7.png" alt="Virtual Machine part 3"/>
 </p>
 <p>
-Enter a Username and Password that will be used for Remote Desktop access. 
+Enter a Username (labuser) and Password that will be used for Remote Desktop access. 
 </p>
 <p>
 <img src="https://imgur.com/VzXo0eC.png" alt="Virtual Machine part 4"/>
@@ -58,7 +58,7 @@ Check the box that confirms that you have an eligible Windows license.
 <br />
 
 <p>
-Find the Public IP Address for the Virtual Machine. 
+Find the Public IP Address (20.65.200.170) for the Virtual Machine.
 </p>
 <p>
 <img src="https://imgur.com/hmDqnOP.png" alt="Public IP Address"/>
@@ -136,13 +136,13 @@ Check the Internet Information Services box and the CGI box to turn them on. IIS
 <br />
 
 <p>
-Install PHP Manager for IIS from the osTicket Installation Files folder. PHP is the backend scripting language that osTicket runs on.    
+Install PHP Manager for IIS from the osTicket Installation Files folder. PHP is the backend scripting language that osTicket runs on. Follow the prompts to complete the installation.     
 </p>
 <p>
 <img src="https://imgur.com/3nFthaO.png" alt="PHP Manager"/>
 </p>
 <p>
-Install the IIS URL Rewrite Module from the osTicket Installation Files folder. 
+Install the IIS URL Rewrite Module from the osTicket Installation Files folder. Follow the prompts to complete the installation.
 </p>
 <p>
 <img src="https://imgur.com/lZFiGgX.png" alt="Rewrite Module"/>
@@ -194,7 +194,7 @@ Extract the php 7.3.8 zip folder files to the PHP folder in Windows C Drive.
 <br />
 
 <p>
-Install the Microsoft Visuall C++ Redistributale (x86) file from the osTicket Installation Files folder. 
+Install the Microsoft Visual C++ Redistribulate (x86) file from the osTicket Installation Files folder. Follow the prompts to complete the installation. 
 </p>
 <p>
 <img src="https://imgur.com/34PL8lo.png" alt="VC"/>
@@ -474,9 +474,4 @@ View the osTicket Installer page after successful installation.
 <p>
 <img src="https://imgur.com/yMa16hM.png" alt="Success"/>
 </p>
-
-
-
-
-
 
