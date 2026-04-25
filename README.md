@@ -142,10 +142,16 @@ Install PHP Manager for IIS from the osTicket Installation Files folder. PHP is 
 <img src="https://imgur.com/3nFthaO.png" alt="PHP Manager"/>
 </p>
 <p>
+<img src="https://imgur.com/GaVhcdN.png" alt="PHP Manager Wizard"/>
+</p>
+<p>
 Install the IIS URL Rewrite Module from the osTicket Installation Files folder. Follow the prompts to complete the installation.
 </p>
 <p>
 <img src="https://imgur.com/lZFiGgX.png" alt="Rewrite Module"/>
+</p>
+<p>
+<img src="https://imgur.com/nFrjLCr.png" alt="Rewrite Module Wizard"/>
 </p>
 <br />
 
