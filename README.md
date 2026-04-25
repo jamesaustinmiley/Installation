@@ -171,6 +171,9 @@ Expand This PC to gain access to the Windows C Drive and its contents.
 Create a new folder in Windows C Drive named PHP. Right click in the C Drive, click New, and click Folder. 
 </p>
 <p>
+<img src="https://imgur.com/tuESYXW.png" alt="New Folder"/>
+</p>
+<p>
 <img src="https://imgur.com/6ojs6za.png" alt="PHP folder"/>
 </p>
 <p>
@@ -178,6 +181,9 @@ Unzip the php 7.3.8 zip folder in the osTicket Installation Files folder. Right 
 </p>
 <p>
 <img src="https://imgur.com/do4tz9t.png" alt="php 7.3.8 zip folder"/>
+</p>
+<p>
+<img src="https://imgur.com/qVVmAIi.png" alt="Extract All"/>
 </p>
 <p>
 Click Browse to find a destination where the files will be extracted to. 
@@ -204,6 +210,9 @@ Install the Microsoft Visual C++ Redistribulate (x86) file from the osTicket Ins
 </p>
 <p>
 <img src="https://imgur.com/34PL8lo.png" alt="VC"/>
+</p>
+<p>
+<img src="https://imgur.com/XVe8RUS.png" alt="VC Wizard"/>
 </p>
 <p>
 Start the installation of MYSQL 5.5.62 from the osTicket Installation Files folder. MYSQL is the database management system that will store and manage all osTicket help desk data.
